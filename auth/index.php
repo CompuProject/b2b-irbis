@@ -2,6 +2,26 @@
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 ?>
 
+<?if($APPLICATION->GetCurPage() == '/auth/change-password/'):?>
+    <div class="container-fluid auth_bg text-center">
+    <?$APPLICATION->IncludeComponent("aspro:auth.next", "main", array(
+        "SEF_MODE" => "Y",
+        "SEF_FOLDER" => "/auth/",
+        "SEF_URL_TEMPLATES" => array(
+            "auth" => "",
+            "registration" => "registration/",
+            "forgot" => "forgot-password/",
+            "change" => "change-password/",
+            "confirm" => "confirm-password/",
+            "confirm_registration" => "confirm-registration/",
+        ),
+        "PERSONAL" => "/personal/"
+    ),
+        false
+    );?>
+    </div>
+<?else:?>
+
     <div class="container-fluid auth_bg text-center">
         <? $APPLICATION->IncludeComponent("bitrix:system.auth.form", "cp", array(
             "SEF_MODE" => "Y",
@@ -96,5 +116,6 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
         <!---->
         <!--        </div>-->
     </div>
+<?endif;?>
 
 <? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
