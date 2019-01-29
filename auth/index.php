@@ -3,7 +3,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 ?>
 
 <?if($APPLICATION->GetCurPage() == '/auth/change-password/'):?>
-    <div class="container-fluid auth_bg text-center">
+<!--    <div class="container-fluid auth_bg text-center">-->
     <?$APPLICATION->IncludeComponent("aspro:auth.next", "main", array(
         "SEF_MODE" => "Y",
         "SEF_FOLDER" => "/auth/",
@@ -19,10 +19,10 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
     ),
         false
     );?>
-    </div>
+<!--    </div>-->
 <?else:?>
 
-    <div class="container-fluid auth_bg text-center">
+<!--    <div class="container-fluid auth_bg text-center">-->
         <? $APPLICATION->IncludeComponent("bitrix:system.auth.form", "cp", array(
             "SEF_MODE" => "Y",
             "SEF_FOLDER" => "/auth/",
@@ -38,10 +38,10 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
         ),
             false
         );?>
-            <div class="authCopy">
-                <div class="authCopy_text text-center">© Все права защищены ООО "Ирбис ТД" 2005-<?=date("Y")?></div>
-                <div class="authCopy_text text-center pl-4"><a target="_blank" href="https://irbis-td.ru/policy.html">Политика конфиденциальности и файлы cookie</a></div>
-            </div>
+<!--            <div class="authCopy">-->
+<!--                <div class="authCopy_text text-center">© Все права защищены ООО "Ирбис ТД" 2005---><?//=date("Y")?><!--</div>-->
+<!--                <div class="authCopy_text text-center pl-4"><a target="_blank" href="https://irbis-td.ru/policy.html">Политика конфиденциальности и файлы cookie</a></div>-->
+<!--            </div>-->
 <!--            <div class="row authCopy">-->
 <!--                <div class="col-6 authCopy_text text-center">© Все права защищены ООО "Ирбис ТД" 2005---><?//=date("Y")?><!--</div>-->
 <!--                <div class="col-6 authCopy_text text-center">Политика конфиденциальности и файлы cookie</div>-->
@@ -115,7 +115,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
         <!--            </div>-->
         <!---->
         <!--        </div>-->
-    </div>
+<!--    </div>-->
 <?endif;?>
 
 <? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
