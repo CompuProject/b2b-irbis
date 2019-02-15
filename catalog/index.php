@@ -43,7 +43,7 @@ $APPLICATION->IncludeComponent(
 			7 => "",
 		),
 		"FILTER_PRICE_CODE" => array(
-			0 => "B2C",
+
 			1 => "B2B",
 		),
 		"FILTER_OFFERS_FIELD_CODE" => array(
@@ -103,7 +103,7 @@ $APPLICATION->IncludeComponent(
 		"COMPARE_ELEMENT_SORT_ORDER" => "asc",
 		"DISPLAY_ELEMENT_SELECT_BOX" => "N",
 		"PRICE_CODE" => array(
-			0 => "B2C",
+
 			1 => "B2B",
 		),
 		"USE_PRICE_COUNT" => "N",
